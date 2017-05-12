@@ -1,0 +1,71 @@
+{ "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "_id" : {
+      "type"      : "string",
+      "minLength" : 25,
+      "maxLength" : 25
+    },
+    "name" : {
+      "type"      : "string",
+      "minLength" : 2,
+      "maxLength" : 127
+    },
+    "classification" : {
+      "type"      : "string",
+      "minLength" : 2,
+      "maxLength" : 127
+    },
+    "brands" : {
+      "type"      : "array",
+			"additionalProperties" : false,
+			"items" : {
+				"type"    : "object",
+				"additionalProperties" : false,
+				"properties" : {
+					"brand_name" : {
+						"type" :"string",
+						"minLength"  : 2,
+						"maxLength"  : 127
+					}
+				}
+			},
+			"minItems" : 1,
+			"uniqueItems" : true
+    },
+    "models" : {
+      "type"      : "array",
+			"additionalProperties" : false,
+			"items" : {
+				"type"    : "object",
+				"additionalProperties" : false,
+				"properties" : {
+					"model_name" : {
+						"type" :"string",
+						"minLength"  : 2,
+						"maxLength"  : 127
+					}
+				}
+			},
+			"minItems" : 1,
+			"uniqueItems" : true
+    },
+    "engines" : {
+      "type"      : "array",
+			"additionalProperties" : false,
+			"items" : {
+				"type"    : "object",
+				"additionalProperties" : false,
+				"properties" : {
+					"engine_name" : {
+						"type" :"string",
+						"minLength"  : 2,
+						"maxLength"  : 127
+					}
+				}
+			},
+			"minItems" : 1,
+			"uniqueItems" : true
+    }
+  }
+}

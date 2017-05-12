@@ -1,0 +1,16 @@
+{ "name"    : "emotion",
+  "version" : "0.0.1",
+  "private" : true,
+  "dependencies" : {
+    "express"   : "3.2.x",
+    "mongodb"   : "2.x.x",
+    "socket.io" : "0.9.x",
+    "JSV"       : "4.0.x",
+    "lodash"    : "3.10.1",
+    "wechat"    : "2.0.3",
+    "wechat-api" : "1.22.0",
+    "yahoo-finance" : "0.2.12",
+    "weibo"         : "0.6.11",
+		"segment"   : "0.1.3"
+  }
+}

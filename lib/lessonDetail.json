@@ -1,0 +1,98 @@
+{ "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "_id" : {
+      "type"      : "string",
+      "minLength" : 12,
+      "maxLength" : 12
+    },
+		"name" : {
+			"required"  : true,
+			"type" : "string",
+			"minLength" : 2,
+			"maxLength" : 127
+		},
+		"author" : {
+			"required"  : true,
+			"type" : "string",
+			"minLength" : 2,
+			"maxLength" : 127
+		},
+		"time" : {
+			"required"  : true,
+			"type" : "string",
+			"minLength" : 2,
+			"maxLength" : 127
+		},
+		"thumb_up" : {
+			"required"  : true,
+			"type" : "integer"
+		},
+		"comments_num" : {
+			"required"  : true,
+			"type" : "integer"
+		},
+		"category" : {
+			"required"  : true,
+			"type" : "string",
+			"minLength" : 2,
+			"maxLength" : 127
+		},
+		"class" : {
+			"required"  : true,
+			"type" : "string",
+			"minLength" : 2,
+			"maxLength" : 127
+		},
+		"cover_image_addr" : {
+			"required"  : true,
+			"type" : "string",
+			"minLength" : 2,
+			"maxLength" : 500
+		},
+    "reference" : {
+      "type"      : "object",
+			"additionalProperties" : false,
+			"properties" : {
+				"url" : {
+					"type" : "string",
+					"minLength" : 2,
+					"maxLength" : 500
+				},
+				"from" : {
+					"type" : "string",
+					"minLength" : 2,
+					"maxLength" : 127
+				},
+				"author" : {
+					"type" : "string",
+					"minLength" : 2,
+					"maxLength" : 127
+				}
+			}
+    },
+		"detail" : {
+			"required"  : true,
+			"type" : "array",
+			"additionalProperties" : false,
+			"items" : {
+				"type" : "object",
+				"additionalProperties" : false,
+				"properties" : {
+					"tag" : {
+						"required"  : true,
+						"type" : "string",
+						"minLength" : 1,
+						"maxLength" : 127
+					},
+					"value" : {
+						"required"  : true,
+						"type" : "string",
+						"minLength" : 2,
+						"maxLength" : 1000
+					}
+				}
+			}
+		}
+  }
+}

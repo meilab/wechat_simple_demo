@@ -1,0 +1,117 @@
+{ "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "_id" : {
+      "type"      : "string",
+      "minLength" : 12,
+      "maxLength" : 12
+    },
+    "name" : {
+			"required"  : true,
+      "type"      : "string",
+      "minLength" : 2,
+      "maxLength" : 127
+    },
+    "brand" : {
+			"required"  : true,
+      "type"      : "string",
+      "minLength" : 2,
+      "maxLength" : 127
+    },
+    "model" : {
+			"required"  : true,
+      "type"      : "string",
+      "minLength" : 2,
+      "maxLength" : 127
+    },
+    "engine" : {
+			"required"  : true,
+      "type"      : "string",
+      "minLength" : 2,
+      "maxLength" : 127
+    },
+    "min_time" : {
+			"required"  : true,
+      "type"      : "integer"
+    },
+    "min_distance" : {
+			"required"  : true,
+      "type"      : "integer"
+    },
+    "change_parts" : {
+			"required"  : true,
+      "type"      : "array",
+			"additionalProperties" : false,
+			"items" : {
+				"type" : "object",
+				"additionalProperties" : false,
+				"properties" : {
+					"name" : {
+						"required"  : true,
+						"type" : "string",
+						"minLength" : 2,
+						"maxLength" : 127
+					},
+					"first_time" : {
+						"required"  : true,
+						"type" : "integer"
+					},
+					"first_distance" : {
+						"required"  : true,
+						"type" : "integer"
+					},
+					"time_interval" : {
+						"required"  : true,
+						"type" : "integer"
+					},
+					"distance_interval" : {
+						"required"  : true,
+						"type" : "integer"
+					}
+				}
+			},
+			"minItems" : 1,
+			"uniqueItems" : true
+    },
+    "check_parts" : {
+			"required"  : true,
+      "type"      : "array",
+			"additionalProperties" : false,
+			"items" : {
+				"type" : "object",
+				"additionalProperties" : false,
+				"properties" : {
+					"name" : {
+						"required"  : true,
+						"type" : "string",
+						"minLength" : 2,
+						"maxLength" : 127
+					},
+					"first_time" : {
+						"required"  : true,
+						"type" : "integer"
+					},
+					"first_distance" : {
+						"required"  : true,
+						"type" : "integer"
+					},
+					"time_interval" : {
+						"required"  : true,
+						"type" : "integer"
+					},
+					"distance_interval" : {
+						"required"  : true,
+						"type" : "integer"
+					},
+					"notes" : {
+						"type" : "string",
+						"minLength" : 2,
+						"maxLength" : 127
+					}
+				}
+			},
+			"minItems" : 1,
+			"uniqueItems" : true
+    }
+  }
+}

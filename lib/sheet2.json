@@ -1,0 +1,16 @@
+[
+  {
+    "word": "脏乱",
+    "category": "adj",
+    "emotion": "NN",
+    "strength": 7,
+    "polar": 2
+  },
+  {
+    "word": "糟报",
+    "category": "adj",
+    "emotion": "NN",
+    "strength": 5,
+    "polar": 2
+  }
+]
